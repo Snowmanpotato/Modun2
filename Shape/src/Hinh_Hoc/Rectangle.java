@@ -1,4 +1,9 @@
-public class Rectangle extends Shape{
+package Hinh_Hoc;
+
+import BT_interface.Resizeable;
+import Hinh_Hoc.Shape;
+
+public class Rectangle extends Shape implements Resizeable<Double> {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -39,11 +44,17 @@ public class Rectangle extends Shape{
     }
     @Override
     public String toString() {
-        return "A Rectangle with width="
+        return "A Hinh_Hoc.Rectangle with width="
                 + getWidth()
                 + " and length="
                 + getLength()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.width = (getWidth()/100)*percent;
+        this.length = (getLength()/100)*percent;
     }
 }

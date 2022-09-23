@@ -1,4 +1,9 @@
-public class Square extends Rectangle{
+package Hinh_Hoc;
+
+import BT_interface.Resizeable;
+import Hinh_Hoc.Rectangle;
+
+public class Square extends Rectangle implements Resizeable<Double> {
     public Square(){
 
     }
@@ -29,8 +34,14 @@ public class Square extends Rectangle{
     }
 
     @Override
+    public void resize(double percent) {
+       super.setWidth((super.getWidth()/100)*percent);
+        super.setLength((super.getLength()/100)*percent);
+    }
+
+    @Override
     public String toString() {
-        return "A Square with side="
+        return "A Hinh_Hoc.Square with side="
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();

@@ -1,3 +1,7 @@
+package Hinh_Hoc;
+
+import Hinh_Hoc.Circle;
+
 public class Main {
     public static void main(String[] args) {
         //ShapeTest
