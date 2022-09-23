@@ -1,9 +1,9 @@
 package Hinh_Hoc;
 
+import BT_interface.Colorable;
 import BT_interface.Resizeable;
-import Hinh_Hoc.Rectangle;
 
-public class Square extends Rectangle implements Resizeable<Double> {
+public class Square extends Rectangle implements Resizeable<Double>, Colorable<String> {
     public Square(){
 
     }
@@ -45,5 +45,10 @@ public class Square extends Rectangle implements Resizeable<Double> {
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides.");
     }
 }

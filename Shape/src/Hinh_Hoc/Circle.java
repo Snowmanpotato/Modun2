@@ -1,8 +1,9 @@
 package Hinh_Hoc;
 
+import BT_interface.Colorable;
 import BT_interface.Resizeable;
 
-public class Circle extends Shape implements Resizeable<Double> {
+public class Circle extends Shape implements Resizeable<Double>, Colorable<String> {
     private double radius = 1.0;
 
     public Circle() {
@@ -45,5 +46,10 @@ public class Circle extends Shape implements Resizeable<Double> {
     @Override
     public void resize(double percent) {
         this.radius = (getRadius() / 100) * percent;
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides.");
     }
 }

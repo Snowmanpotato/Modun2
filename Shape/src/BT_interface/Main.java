@@ -23,5 +23,6 @@ public class Main {
         hinhVuong.resize(50);
         System.out.println("After resize\n" + hinhVuong);
 
+
     }
 }

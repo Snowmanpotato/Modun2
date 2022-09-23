@@ -28,6 +28,8 @@ public class Shape {
         this.filled = filled;
     }
 
+
+
     @Override
     public String toString() {
         return "A Hinh_Hoc.Shape with color of "

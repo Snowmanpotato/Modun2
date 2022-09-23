@@ -1,9 +1,10 @@
 package Hinh_Hoc;
 
+import BT_interface.Colorable;
 import BT_interface.Resizeable;
 import Hinh_Hoc.Shape;
 
-public class Rectangle extends Shape implements Resizeable<Double> {
+public class Rectangle extends Shape implements Resizeable<Double>, Colorable<String> {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -56,5 +57,10 @@ public class Rectangle extends Shape implements Resizeable<Double> {
     public void resize(double percent) {
         this.width = (getWidth()/100)*percent;
         this.length = (getLength()/100)*percent;
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides.");
     }
 }
